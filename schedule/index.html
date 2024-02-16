@@ -318,7 +318,41 @@ var calendarPrev = document.querySelector('.calendar-prev');
 
 calendarTable.style.maxWidth = '100vw';
 calendarNext.style.display = 'none';
-calendarPrev.style.display = 'none';</script>
+calendarPrev.style.display = 'none';
+
+var weekdayHeadings = document.querySelectorAll('.normal-day-heading');
+var weekendHeadings = document.querySelectorAll('.weekend-heading');
+var timesTitle = document.querySelectorAll('.spiffy-title');
+
+weekdayHeadings.forEach(function(element) {
+    if (window.innerWidth <= 768) {
+        // Mobile viewport width, set font size to 2vw
+        element.style.fontSize = '2vw';
+    } else {
+        // Desktop viewport width, set font size to 11px
+        element.style.fontSize = '1vw';
+    }
+});
+
+weekendHeadings.forEach(function(element) {
+    if (window.innerWidth <= 768) {
+        // Mobile viewport width, set font size to 2vw
+        element.style.fontSize = '2vw';
+    } else {
+        // Desktop viewport width, set font size to 11px
+        element.style.fontSize = '1vw';
+    }
+});
+
+timesTitle.forEach(function(element) {
+    if (window.innerWidth <= 768) {
+        // Mobile viewport width, set font size to 2vw
+        element.style.fontSize = '2vw';
+    } else {
+        // Desktop viewport width, set font size to 11px
+        element.style.fontSize = '1vw';
+    }
+});</script>
 </div>
 </main>
 
